@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CartComponent } from './cart/cart.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CartComponent } from './cart/cart.component';
     HomeComponent,
     ProductListComponent,
     ProfileComponent,
-    CartComponent
+    CartComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,7 @@ import { CartComponent } from './cart/cart.component';
       { path: 'cart', component: CartComponent },
       { path: 'profile', component: ProfileComponent},
       { path:'', component: HomeComponent},
+      { path:'products/:productId', component: ProductDetailsComponent},
     ]),
   ],
   providers: [],
